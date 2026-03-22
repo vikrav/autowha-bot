@@ -1,0 +1,15 @@
+{
+  "name": "autowha-termux-bot",
+  "version": "1.0.0",
+  "description": "AutoWha Bot - User ke phone mein chalega",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.5.0",
+    "qrcode": "^1.5.3",
+    "qrcode-terminal": "^0.12.0",
+    "pino": "^8.0.0"
+  }
+}
