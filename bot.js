@@ -61,7 +61,7 @@ async function handleAutoReply(from, text) {
     if (!userSettings) await fetchSettings();
     if (!userSettings) return;
 
-    const phone = from.replace('@s.whatsapp.net', '').replace(/\D/g, '').slice(-10);
+    console.log('RAW FROM:', from); const phone = from.replace('@s.whatsapp.net', '').replace(/\D/g, '').slice(-10);
     const msg = text.trim().toLowerCase();
     const delay = (ms) => new Promise(r => setTimeout(r, ms));
     const typingDelay = (txt) => Math.min(1500 + txt.split(' ').length * 80, 4000);
