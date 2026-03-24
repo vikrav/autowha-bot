@@ -1,4 +1,4 @@
-const SERVER = 'https://autowha-worker.vicky992838.workers.dev';
+const SERVER = 'https://api.autowha.com';
 const TOKEN = process.env.TOKEN || '';
 const fs = require('fs');
 const path = require('path');
