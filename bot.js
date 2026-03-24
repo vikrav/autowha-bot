@@ -216,7 +216,7 @@ setInterval(async()=>{try{await fetch(`${SERVER}/api/whatsapp/heartbeat`,{method
     if (type !== 'notify') return;
     for (const msg of messages) {
       if (msg.key.fromMe) continue;
-      if (msg.key.remoteJid?.endsWith('@g.us')) continue;
+      if (msg.key.remoteJid?.endsWith('@g.us')) continue; if (msg.key.remoteJid?.endsWith('@lid')) continue;
       const text = msg.message?.conversation || msg.message?.extendedTextMessage?.text || '';
       if (text) await handleAutoReply(msg.key.remoteJid, text);
     }
