@@ -199,6 +199,7 @@ async function startBot() {
       await fetchSettings();
       // Har 30 second mein sync karo
       setInterval(fetchSettings, 30000);
+setInterval(async () => { try { await fetch(${SERVER}/api/whatsapp/heartbeat, { method: 'POST', headers: { Authorization: Bearer  } }); } catch(e) {} }, 30000);
     }
     if (connection === 'close') {
       const loggedOut = lastDisconnect?.error?.output?.statusCode === DisconnectReason.loggedOut;
@@ -226,3 +227,4 @@ async function startBot() {
 console.log('🚀 AutoWha Bot shuru ho raha hai...');
 console.log(`🌐 Server: ${SERVER}`);
 fetchSettings().then(() => startBot());
+
